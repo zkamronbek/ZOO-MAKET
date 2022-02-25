@@ -1,0 +1,21 @@
+*,
+::before,
+::after{
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    background-color: #E5E5E5;
+flex-grow: 1;
+}
+a{
+    text-decoration: none;
+
+}
+img{
+    display: block;
+    widows: 100%;
+}
