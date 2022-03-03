@@ -1,3 +1,35 @@
+*,
+::before,
+::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0;
+  padding: 0;
+  background-color: #E5E5E5;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  widows: 100%;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -389,38 +421,6 @@ template {
   src: url("../fonts/rubik-v18-latin-regular.woff2") format("woff2"), url("../fonts/rubik-v18-latin-regular.woff") format("woff");
 }
 
-*,
-::before,
-::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin: 0;
-  padding: 0;
-  background-color: #E5E5E5;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-}
-
-a {
-  text-decoration: none;
-}
-
-img {
-  display: block;
-  widows: 100%;
-}
-
 .container {
   max-width: 1608px;
   margin: 0 auto;
@@ -452,12 +452,16 @@ img {
 
 .nav__link {
   color: #C5E1E6;
-  font-family: "Roboto";
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
   line-height: 21px;
   text-transform: uppercase;
+}
+
+.nav__link:hover {
+  border-bottom: 2px solid #C5E1E6;
 }
 
 .nav__list-item {
@@ -504,5 +508,56 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.item1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 6;
+  grid-area: header;
+}
+
+.item2 {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: menu;
+}
+
+.item3 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-area: main;
+}
+
+.item4 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 2;
+  grid-area: right;
+}
+
+.item5 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 5;
+  grid-area: footer;
+}
+
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'header header header header header header' 'menu main main main right right' 'menu footer footer footer footer footer';
+  padding: 10px;
+  background-color: #21e5f3;
+  gap: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
 }
 /*# sourceMappingURL=main.css.map */

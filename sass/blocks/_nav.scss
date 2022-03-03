@@ -17,6 +17,9 @@ font-weight: normal;
 font-size: 18px;
 line-height: 21px;
 text-transform: uppercase;
+&:hover{
+    border-bottom: 2px solid #C5E1E6;;
+}
 }
 .nav__list-item{
     margin-right: 52px;
